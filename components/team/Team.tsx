@@ -2,8 +2,7 @@ import React from 'react';
 
 import { CloudsSVG } from '../_images/Clouds';
 import Separator from '../_images/Separator.svg';
-import AlinaPrimary from '../_images/team/primary/alina.svg';
-import AntonPrimary from '../_images/team/primary/anton.svg';
+import AgePrimary from '../_images/team/primary/age.svg';
 import EglePrimary from '../_images/team/primary/egle.svg';
 import HarlesPrimary from '../_images/team/primary/harles.svg';
 import IvarPrimary from '../_images/team/primary/ivar.svg';
@@ -13,10 +12,8 @@ import SuviPrimary from '../_images/team/primary/kaspars.svg';
 import KristoPrimary from '../_images/team/primary/kristo.svg';
 import LauraPrimary from '../_images/team/primary/laura.svg';
 import LaurasPrimary from '../_images/team/primary/lauras.svg';
-import InternPrimary from '../_images/team/primary/praktikant.svg';
 import TerasmaaPrimary from '../_images/team/primary/terasmaa.svg';
-import AlinaSecondary from '../_images/team/secondary/alina.svg';
-import AntonSecondary from '../_images/team/secondary/anton.svg';
+import AgeSecondary from '../_images/team/secondary/age.svg';
 import EgleSecondary from '../_images/team/secondary/egle.svg';
 import HarlesSecondary from '../_images/team/secondary/harles.svg';
 import IvarSecondary from '../_images/team/secondary/ivar.svg';
@@ -72,20 +69,19 @@ const Analysts: ITeamMember[] = [
     SecondaryImage: <JoonasSecondary />,
     skillSet: ['Prototyping', 'User research', 'Usability testing'],
   },
+  {
+    name: 'Age Arus',
+    title: 'UX analyst',
+    description: `Focused on bringing only the best solutions to end-users.`,
+    descriptionExtended: 'Elevates the whole team with her enthusiastic and radiant personality.',
+    imageUrl: 'https://www.linkedin.com/in/agearus/',
+    PrimaryImage: <AgePrimary />,
+    SecondaryImage: <AgeSecondary />,
+    skillSet: ['Business analyst', 'Prototyping', 'User research'],
+  },
 ];
 
 const Designers: ITeamMember[] = [
-  {
-    name: 'Alina Trussova',
-    title: 'Art director, UX & UI designer',
-    description: 'Sparks the minds of designers while balancing creativity with rationality.',
-    descriptionExtended: 'When everything is elegant and perfect on earth… the moon will be conquered.',
-    imageUrl: 'https://www.linkedin.com/in/alinatrussova',
-    PrimaryImage: <AlinaPrimary />,
-    SecondaryImage: <AlinaSecondary />,
-    skillSet: ['Branding', 'Graphic design', 'UI design', 'User research', 'Usability testing'],
-    noHover: true,
-  },
   {
     name: 'Egle Kiik',
     title: 'UX & UI designer',
@@ -118,16 +114,6 @@ const Developers: ITeamMember[] = [
     PrimaryImage: <HarlesPrimary />,
     SecondaryImage: <HarlesSecondary />,
     skillSet: ['Vue', 'Aurelia', 'React', 'Angular', 'TypeScript', 'App development', 'BEM'],
-  },
-  {
-    name: 'Anton Aavik',
-    title: 'Senior front-end developer',
-    description: 'Open-source enthusiast, who strives for perfection.',
-    descriptionExtended: `Abracadabra, hocus-pocus, add a bit of secret ingredients and magic happens.`,
-    imageUrl: 'https://www.linkedin.com/in/anton-aavik-0ba1a9176/',
-    PrimaryImage: <AntonPrimary />,
-    SecondaryImage: <AntonSecondary />,
-    skillSet: ['Vue', 'React', 'Angular', 'TypeScript', 'App development', 'BEM'],
   },
   {
     name: 'Tõnis Terasmaa',
