@@ -77,7 +77,7 @@ const Analysts: ITeamMember[] = [
     imageUrl: 'https://www.linkedin.com/in/agearus/',
     PrimaryImage: <AgePrimary />,
     SecondaryImage: <AgeSecondary />,
-    skillSet: ['Business analyst', 'Prototyping', 'User research'],
+    skillSet: ['Business analysis', 'Prototyping', 'User research'],
   },
 ];
 
