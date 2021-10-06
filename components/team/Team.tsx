@@ -12,7 +12,6 @@ import SuviPrimary from '../_images/team/primary/kaspars.svg';
 import KristoPrimary from '../_images/team/primary/kristo.svg';
 import LauraPrimary from '../_images/team/primary/laura.svg';
 import LaurasPrimary from '../_images/team/primary/lauras.svg';
-import TerasmaaPrimary from '../_images/team/primary/terasmaa.svg';
 import AgeSecondary from '../_images/team/secondary/age.svg';
 import EgleSecondary from '../_images/team/secondary/egle.svg';
 import HarlesSecondary from '../_images/team/secondary/harles.svg';
@@ -23,7 +22,6 @@ import SuviSecondary from '../_images/team/secondary/kaspars.svg';
 import KristoSecondary from '../_images/team/secondary/kristo.svg';
 import LauraSecondary from '../_images/team/secondary/laura.svg';
 import LaurasSecondary from '../_images/team/secondary/lauras.svg';
-import TerasmaaSecondary from '../_images/team/secondary/terasmaa.svg';
 import { Stars } from '../stars/Stars';
 
 export interface ITeamMember {
@@ -114,16 +112,6 @@ const Developers: ITeamMember[] = [
     PrimaryImage: <HarlesPrimary />,
     SecondaryImage: <HarlesSecondary />,
     skillSet: ['Vue', 'Aurelia', 'React', 'Angular', 'TypeScript', 'App development', 'BEM'],
-  },
-  {
-    name: 'Tõnis Terasmaa',
-    title: 'Front-end developer',
-    description: 'Doing creative wizardry with software and hardware.',
-    descriptionExtended: 'Cooking with one hand and coding with the other.... coding is a piece of cake.',
-    imageUrl: 'https://www.linkedin.com/in/t%C3%B5nis-terasmaa-79b6bbb7/',
-    PrimaryImage: <TerasmaaPrimary />,
-    SecondaryImage: <TerasmaaSecondary />,
-    skillSet: ['Vue', 'React', 'Angular', 'TypeScript', 'App development', 'BEM'],
   },
   {
     name: 'Ivar Kallejärv',
