@@ -2,7 +2,7 @@ import React from 'react';
 
 import BackgroundBottom from '../_images/Background-Bottom.svg';
 import BackgroundTop from '../_images/Background-Top.svg';
-import DietlessSVG from '../_images/Dietless.svg';
+// import DietlessSVG from '../_images/Dietless.svg';
 import ERES from '../_images/E-Res.svg';
 import EPS from '../_images/EPS.svg';
 import ERBISVG from '../_images/ERBI.svg';
@@ -61,7 +61,7 @@ export const ProjectList: IProject[] = [
   },
   */
   {
-    name: 'Eesti Perearstide Selts',
+    name: 'The Estonian Society of Family Doctors',
     description:
       'This project was started with the aim to improve the efficiency and quality of healthcare services. Starting from the ground up - talking with nurses and doctors - has been a learning opportunity for many in a field that has been too static for the longest time.',
     time: '04.2020 - ...',
