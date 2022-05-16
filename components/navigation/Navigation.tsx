@@ -2,13 +2,16 @@ import React from 'react';
 
 import Logo from '../_images/logo.svg';
 
-const HeaderLinks = [
-  { link: '#process', name: 'Process' },
-  { link: '#journey', name: 'Journey' },
-  { link: '#team', name: 'Team' },
-];
+interface IHeaderLinks {
+  link: string;
+  name: string;
+}
 
-export const Navigation: React.FC = () => {
+interface IHeaderProps {
+  headerLinks: IHeaderLinks[];
+}
+
+export const Navigation = (props: IHeaderProps): JSX.Element => {
   const [isVisible, setIsVisible] = React.useState(false);
   const toggleNav = () => setIsVisible(!isVisible);
 
@@ -22,7 +25,7 @@ export const Navigation: React.FC = () => {
           </a>
         </div>
         <ul className="navigation__items">
-          {HeaderLinks.map(({ link, name }, index) => (
+          {props.headerLinks.map(({ link, name }, index) => (
             <li key={index} className="navigation__item">
               <a href={link} onClick={toggleNav}>
                 {name}

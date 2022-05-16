@@ -11,6 +11,13 @@ import { WorkFlow } from '../components/workflow/WorkFlow';
 const NewIndex: React.FC = () => {
   const [headingShouldBreak, setHeadingShouldBreak] = React.useState(false);
 
+  const headerLinks = [
+    { link: '#process', name: 'Process' },
+    { link: '#journey', name: 'Journey' },
+    { link: '#team', name: 'Team' },
+    { link: '/careers', name: 'Careers' },
+  ];
+
   React.useEffect(() => {
     let didScroll = false;
 
@@ -126,7 +133,7 @@ const NewIndex: React.FC = () => {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,700&display=swap" />
         </noscript>
       </Head>
-      <Navigation />
+      <Navigation headerLinks={headerLinks} />
       <MovingStars />
       <main>
         <section className="transform-header__jumbotron" id="transform-header__jumbotron">
