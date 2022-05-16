@@ -41,16 +41,15 @@ export const ProjectList: IProject[] = [
     project: 'https://www.e-resident.gov.ee/',
     tags: ['UX analysis', 'Business analysis', 'Prototyping', 'Development', 'React', 'Wordpress'],
   },
-  /*
-  TODO Approval pending, upon receiving approval remove placeholder and replace with one of these
   {
     name: 'ERM',
     description:
       'Allows you to retrace your steps in the museum, to glean additional info on things you missed the first time and giving you a new perspective on how a digital museum can bring the history closer to you.',
     time: '11.2018 - 12.2021',
     image: <ERM />,
-    tags: ['Development', 'React', 'Wordpress'],
+    tags: ['Service design', 'Development', 'React'],
   },
+  /*
   {
     name: 'Dietless',
     description: 'A tailor-made meal plan app as a guide towards good health and right fat percentage for Estonians',
@@ -78,13 +77,6 @@ export const ProjectList: IProject[] = [
     image: <ERBISVG />,
     project: 'https://questionnaire.csr.ee/#/login?afterLoginHash=%23%2FbasicQuestionnaire',
     tags: ['Design', 'Prototype', 'UX research', 'Usability testing', 'Development', 'Aurelia'],
-  },
-  {
-    name: 'And many more...',
-    description: '',
-    time: '',
-    image: <></>,
-    tags: [],
   },
 ];
 
