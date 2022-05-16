@@ -3,8 +3,10 @@ import React from 'react';
 import BackgroundBottom from '../_images/Background-Bottom.svg';
 import BackgroundTop from '../_images/Background-Top.svg';
 import DietlessSVG from '../_images/Dietless.svg';
+import ERES from '../_images/E-Res.svg';
 import EPS from '../_images/EPS.svg';
 import ERBISVG from '../_images/ERBI.svg';
+import ERM from '../_images/erm-logo.svg';
 import Separator from '../_images/Separator.svg';
 import Taltech from '../_images/Taltech.svg';
 import { Stars } from '../stars/Stars';
@@ -21,22 +23,42 @@ interface IProject {
 
 export const ProjectList: IProject[] = [
   {
+    name: 'Tallinn University of Technology',
+    description:
+      "It's all about making the life of students, professors and all other university personnel more convenient and efficient.",
+    time: '08.2018 - ...',
+    image: <Taltech />,
+    // No public page to display
+    // project: 'https://www.taltech.ee/en',
+    tags: ['UX research', 'Usability testing', 'Prototype', 'Business analysis', 'Development', 'React'],
+  },
+  {
+    name: 'e-Residency',
+    description:
+      'e-Residency offers everyone a government-issued digital identity and the opportunity to run a trusted company online, unleashing the world’s entrepreneurial potential.',
+    time: '01.2021 - ...',
+    image: <ERES />,
+    project: 'https://www.e-resident.gov.ee/',
+    tags: ['UX analysis', 'Business analysis', 'Prototyping', 'Development', 'React', 'Wordpress'],
+  },
+  /*
+  {
+    name: 'ERM',
+    description:
+      'Allows you to retrace your steps in the museum, to glean additional info on things you missed the first time and giving you a new perspective on how a digital museum can bring the history closer to you.',
+    time: '11.2018 - 12.2021',
+    image: <ERM />,
+    tags: ['Development', 'React', 'Wordpress'],
+  },
+  */
+  {
     name: 'Dietless',
     description: 'A tailor-made meal plan app as a guide towards good health and right fat percentage for Estonians',
     time: '11.2016 - 09.2021',
     image: <DietlessSVG />,
     award: { text: 'Kuldmuna 2018', link: 'https://defol.io/kuldmuna/2018-erik-orgus-tailor-made-meal-plan-app' },
     project: 'https://www.erikorgu.ee',
-    tags: ['Development', 'Angular', 'Cordova', 'User testing'],
-  },
-  {
-    name: 'Estonian Responsible Business Index',
-    description:
-      'Responsible and caring companies creating a wholesome and healthy living environment. Nationally acclaimed assessment platform made with Estonian  enterprises.',
-    time: '06.2016 - 12.2018',
-    image: <ERBISVG />,
-    project: 'https://questionnaire.csr.ee/#/login?afterLoginHash=%23%2FbasicQuestionnaire',
-    tags: ['Design', 'Prototype', 'UX research', 'Usability testing', 'Development', 'Aurelia'],
+    tags: ['User testing', 'Development', 'Angular', 'Cordova'],
   },
   {
     name: 'Eesti Perearstide Selts',
@@ -48,13 +70,13 @@ export const ProjectList: IProject[] = [
     tags: ['Prototyping', 'UI analysis', 'Service design', 'User research'],
   },
   {
-    name: 'Taltech',
+    name: 'Estonian Responsible Business Index',
     description:
-      "It's all about making the life of students, professors and all other university personnel more convenient and efficient.",
-    time: '08.2018 - ...',
-    image: <Taltech />,
-    // project: 'https://www.taltech.ee/en',
-    tags: ['UX research', 'Usability testing', 'Prototype', 'Business analysis', 'Development', 'React'],
+      'Responsible and caring companies creating a wholesome and healthy living environment. Nationally acclaimed assessment platform made with Estonian  enterprises.',
+    time: '06.2016 - 12.2018',
+    image: <ERBISVG />,
+    project: 'https://questionnaire.csr.ee/#/login?afterLoginHash=%23%2FbasicQuestionnaire',
+    tags: ['Design', 'Prototype', 'UX research', 'Usability testing', 'Development', 'Aurelia'],
   },
 ];
 
@@ -98,7 +120,13 @@ export const Portfolio: React.FC = () => (
               ) : null}
             </p>
           </div>
-          <div className={`portfolio-project__logo ${index === 1 ? 'portfolio-project__logo--xs' : ''}`}>{image}</div>
+          <div
+            className={`portfolio-project__logo ${
+              index === ProjectList.length - 1 ? 'portfolio-project__logo--xs' : ''
+            }`}
+          >
+            {image}
+          </div>
         </li>
       ))}
     </ul>
