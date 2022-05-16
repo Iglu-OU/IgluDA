@@ -6,7 +6,7 @@ export interface ICard {
   content: string;
   isExpanded?: boolean;
   onClick?: () => void;
-  onClose?: () => void;
+  onClose?: (event: React.MouseEvent<HTMLElement>) => void;
 }
 
 export const Card: React.FC<ICard> = ({ heading, labels, content, isExpanded, onClick, onClose }) => {
