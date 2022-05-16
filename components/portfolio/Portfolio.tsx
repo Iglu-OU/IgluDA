@@ -36,7 +36,7 @@ export const ProjectList: IProject[] = [
     time: '06.2016 - 12.2018',
     image: <ERBISVG />,
     project: 'https://questionnaire.csr.ee/#/login?afterLoginHash=%23%2FbasicQuestionnaire',
-    tags: ['Design', 'Prototype', 'User research', 'User testing', 'Development', 'Aurelia'],
+    tags: ['Design', 'Prototype', 'UX research', 'Usability testing', 'Development', 'Aurelia'],
   },
   {
     name: 'Eesti Perearstide Selts',
@@ -50,11 +50,11 @@ export const ProjectList: IProject[] = [
   {
     name: 'Taltech',
     description:
-      'Inspiring global policy makers, political leaders, corporate executives, investors and international media with the success story of e-Estonia and build links to leading IT service providers',
+      "It's all about making the life of students, professors and all other university personnel more convenient and efficient.",
     time: '08.2018 - ...',
     image: <Taltech />,
     // project: 'https://www.taltech.ee/en',
-    tags: ['Development', 'React'],
+    tags: ['UX research', 'Usability testing', 'Prototype', 'Business analysis', 'Development', 'React'],
   },
 ];
 
