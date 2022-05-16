@@ -122,7 +122,7 @@ export const Portfolio: React.FC = () => (
           </div>
           <div
             className={`portfolio-project__logo ${
-              index === ProjectList.length - 1 ? 'portfolio-project__logo--xs' : ''
+              index === ProjectList.length - 1 || index === ProjectList.length - 2 ? 'portfolio-project__logo--xs' : ''
             }`}
           >
             {image}
