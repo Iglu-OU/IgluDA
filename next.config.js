@@ -2,9 +2,10 @@ const withPWA = require('next-pwa');
 
 module.exports = withPWA({
   webpack5: true,
+  target: 'experimental-serverless-trace',
   pwa: {
     disable: process.env.NODE_ENV === 'development',
-    dest: '.next',
+    dest: 'public',
   },
   webpack(config) {
     config.module.rules.push({ test: /\.svg$/, use: ['@svgr/webpack'] });
