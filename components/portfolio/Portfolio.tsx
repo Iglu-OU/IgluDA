@@ -42,7 +42,7 @@ export const ProjectList: IProject[] = [
     tags: ['UX analysis', 'Business analysis', 'Prototyping', 'Development', 'React', 'Wordpress'],
   },
   {
-    name: 'ERM',
+    name: 'Estonian National Museum',
     description:
       'Allows you to retrace your steps in the museum, to glean additional info on things you missed the first time and giving you a new perspective on how a digital museum can bring the history closer to you.',
     time: '11.2018 - 12.2021',
