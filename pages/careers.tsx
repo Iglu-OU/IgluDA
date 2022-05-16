@@ -2,11 +2,12 @@ import Head from 'next/head';
 import React from 'react';
 
 import { Footer } from '../components/footer/Footer';
-import { Journey } from '../components/journey/Journey';
 import { Navigation } from '../components/navigation/Navigation';
 import { MovingStars } from '../components/stars/MovingStars';
-import { Team } from '../components/team/Team';
-import { WorkFlow } from '../components/workflow/WorkFlow';
+
+export function getStaticProps() {
+  return { props: { theme: 'dark' } };
+}
 
 const NewIndex: React.FC = () => {
   const [headingShouldBreak, setHeadingShouldBreak] = React.useState(false);
@@ -135,7 +136,7 @@ const NewIndex: React.FC = () => {
       </Head>
       <Navigation headerLinks={headerLinks} />
       <MovingStars />
-      <main className="theme-dark">
+      <main>
         <section id="transform-header__jumbotron">
           <div className="jumbotron" id="jumbotron">
             <div className="jumbotron__content">
