@@ -3,6 +3,7 @@ import React from 'react';
 
 import { Footer } from '../components/footer/Footer';
 import { Navigation } from '../components/navigation/Navigation';
+import Offers from '../components/offers/Offers';
 import { MovingStars } from '../components/stars/MovingStars';
 
 export function getStaticProps() {
@@ -10,8 +11,6 @@ export function getStaticProps() {
 }
 
 const NewIndex: React.FC = () => {
-  const [headingShouldBreak, setHeadingShouldBreak] = React.useState(false);
-
   const headerLinks = [
     { link: 'https://da.iglu.ee/#process', name: 'Process' },
     { link: 'https://da.iglu.ee/#journey', name: 'Journey' },
@@ -59,10 +58,6 @@ const NewIndex: React.FC = () => {
     return () => {
       clearInterval(scrollCheck);
     };
-  });
-
-  React.useEffect(() => {
-    setHeadingShouldBreak(document.body.getBoundingClientRect().width > 460);
   });
 
   React.useEffect(() => {
@@ -146,6 +141,7 @@ const NewIndex: React.FC = () => {
             </div>
           </div>
         </section>
+        <Offers />
       </main>
       <Footer showInternalLinks={false} showExternalLinksName={false} />
     </>
