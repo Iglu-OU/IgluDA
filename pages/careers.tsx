@@ -2,6 +2,7 @@ import Head from 'next/head';
 import React from 'react';
 
 import { Card } from '../components/Card/Card';
+import { CardList } from '../components/CardList/CardList';
 import { Footer } from '../components/footer/Footer';
 import { Navigation } from '../components/navigation/Navigation';
 import Offers from '../components/offers/Offers';
@@ -93,15 +94,6 @@ const NewIndex: React.FC = () => {
     }, initialDuration);
   };
 
-  const jobOffers = (
-    <div>
-      <h4>Näeme front-end arendajana inimest, kellel on.</h4>
-      <ul>
-        <li>vähemalt 2a kogemust front-end arendajana</li>
-      </ul>
-    </div>
-  );
-
   return (
     <>
       <Head>
@@ -148,10 +140,7 @@ const NewIndex: React.FC = () => {
               <h1 className="mt-0" data-aos="zoom-in">
                 Careers <strong className="invisible">page</strong>
               </h1>
-              <Card
-                content={jobOffers}
-                main={{ heading: 'Junior Front-end developer', labels: ['Tallinn', 'Tartu'] }}
-              />
+              <CardList />
             </div>
           </div>
         </section>

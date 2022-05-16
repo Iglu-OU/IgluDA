@@ -1,30 +1,34 @@
 import React from 'react';
 
-interface ICardMain {
+export interface ICard {
   heading: string;
   labels: string[];
+  content: string;
+  isExpanded?: boolean;
+  onClick?: () => void;
+  onClose?: () => void;
 }
 
-interface ICard {
-  content: JSX.Element;
-  main: ICardMain;
-}
-
-export const Card: React.FC<ICard> = ({ content, main }) => {
+export const Card: React.FC<ICard> = ({ heading, labels, content, isExpanded, onClick, onClose }) => {
   return (
-    <div className="card">
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions
+    <div className="card" onClick={onClick}>
       <div className="card__head">
-        <h3>{main.heading}</h3>
+        <h3>{heading}</h3>
         <ul>
-          {main.labels.map((label, index) => (
+          {labels.map((label, index) => (
             <li key={index}>{label}</li>
           ))}
         </ul>
         <hr />
       </div>
-      {content}
-      <button>Sulge kuulutus</button>
-      <button>Kandideeri tööle</button>
+      {isExpanded && (
+        <>
+          <div dangerouslySetInnerHTML={{ __html: content }} />
+          <button onClick={onClose}>Sulge kuulutus</button>
+          <button>Kandideeri tööle</button>
+        </>
+      )}
     </div>
   );
 };
