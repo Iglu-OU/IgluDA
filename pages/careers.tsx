@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
 
-import { Card } from '../components/Card/Card';
+import Separator from '../components/_images/Separator.svg';
 import { CardList } from '../components/CardList/CardList';
 import { Footer } from '../components/footer/Footer';
 import { Navigation } from '../components/navigation/Navigation';
@@ -138,8 +138,19 @@ const NewIndex: React.FC = () => {
           <div className="jumbotron" id="jumbotron">
             <div className="jumbotron__content">
               <h1 className="mt-0" data-aos="zoom-in">
-                Careers <strong className="invisible">page</strong>
+                <strong>Tule ehita meiega koos</strong>
               </h1>
+              <Separator />
+              <p>
+                Iglul on oma lugu. Lugu, mida kirjutavad meie inimesed. Kontoris ja spordiväljakul, metsas ja saunas,
+                koos tahvli ees joonistades ja kooki küpsetades. Ühiselt.
+              </p>
+
+              <p>
+                Meie klientideks on telekomid, pangad, idufirmad. Me valime need kliendid, kellel on tahe teha head
+                asja. Need kliendid, kelle lahendustest saame kaasa rääkida, kasutada kaasaegset tehnoloogiat ja
+                kirjutada puhast koodi. Ainult nii saame jätkada lugu tarkvrarast, mis päriselt töötab.{' '}
+              </p>
               <CardList />
             </div>
           </div>
