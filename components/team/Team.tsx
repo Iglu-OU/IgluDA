@@ -2,29 +2,29 @@ import React from 'react';
 
 import { CloudsSVG } from '../_images/Clouds';
 import Separator from '../_images/Separator.svg';
-import AlinaPrimary from '../_images/team/primary/alina.svg';
-import AntonPrimary from '../_images/team/primary/anton.svg';
+import AgePrimary from '../_images/team/primary/age.svg';
 import EglePrimary from '../_images/team/primary/egle.svg';
 import HarlesPrimary from '../_images/team/primary/harles.svg';
+import ImrePrimary from '../_images/team/primary/imre.svg';
 import IvarPrimary from '../_images/team/primary/ivar.svg';
-import JoonasPrimary from '../_images/team/primary/joonas.svg';
 import NaaberPrimary from '../_images/team/primary/kasparn.svg';
 import SuviPrimary from '../_images/team/primary/kaspars.svg';
 import KristoPrimary from '../_images/team/primary/kristo.svg';
 import LauraPrimary from '../_images/team/primary/laura.svg';
-import InternPrimary from '../_images/team/primary/praktikant.svg';
-import TerasmaaPrimary from '../_images/team/primary/terasmaa.svg';
-import AlinaSecondary from '../_images/team/secondary/alina.svg';
-import AntonSecondary from '../_images/team/secondary/anton.svg';
+import LaurasPrimary from '../_images/team/primary/lauras.svg';
+import RaunoPrimary from '../_images/team/primary/rauno.svg';
+import TimmoPrimary from '../_images/team/primary/timmo.svg';
+import AgeSecondary from '../_images/team/secondary/age.svg';
 import EgleSecondary from '../_images/team/secondary/egle.svg';
 import HarlesSecondary from '../_images/team/secondary/harles.svg';
+import ImreSecondary from '../_images/team/secondary/imre.svg';
 import IvarSecondary from '../_images/team/secondary/ivar.svg';
-import JoonasSecondary from '../_images/team/secondary/joonas.svg';
 import NaaberSecondary from '../_images/team/secondary/kasparn.svg';
 import SuviSecondary from '../_images/team/secondary/kaspars.svg';
 import KristoSecondary from '../_images/team/secondary/kristo.svg';
 import LauraSecondary from '../_images/team/secondary/laura.svg';
-import TerasmaaSecondary from '../_images/team/secondary/terasmaa.svg';
+import LaurasSecondary from '../_images/team/secondary/lauras.svg';
+import RaunoSecondary from '../_images/team/secondary/rauno.svg';
 import { Stars } from '../stars/Stars';
 
 export interface ITeamMember {
@@ -61,29 +61,28 @@ const Analysts: ITeamMember[] = [
     skillSet: ['Business analysis', 'User research', 'Usability testing'],
   },
   {
-    name: 'Joonas Kessel',
-    title: 'UX & UI analyst',
-    description: `Ensures the projects are on track and the users' needs are met.`,
-    descriptionExtended: 'Watch out, you will most likely be hit by several witty remarks within a minute. We like.',
-    imageUrl: 'https://www.linkedin.com/in/joonaskessel/',
-    PrimaryImage: <JoonasPrimary />,
-    SecondaryImage: <JoonasSecondary />,
-    skillSet: ['Prototyping', 'User research', 'Usability testing'],
+    name: 'Rauno Mäekivi',
+    title: 'Business analyst',
+    description: 'Keeping a close eye on all projects, just like a parent.',
+    descriptionExtended: 'Keeping track of all high speed movements both in business and on the race track.',
+    imageUrl: 'https://ee.linkedin.com/in/rauno-maekivi',
+    PrimaryImage: <RaunoPrimary />,
+    SecondaryImage: <RaunoSecondary />,
+    skillSet: ['Business analysis', 'User research', 'Usability testing'],
+  },
+  {
+    name: 'Age Arus',
+    title: 'UX analyst',
+    description: `Focused on bringing only the best solutions to end-users.`,
+    descriptionExtended: 'Elevates the whole team with her enthusiastic and radiant personality.',
+    imageUrl: 'https://www.linkedin.com/in/agearus/',
+    PrimaryImage: <AgePrimary />,
+    SecondaryImage: <AgeSecondary />,
+    skillSet: ['Business analysis', 'Prototyping', 'User research'],
   },
 ];
 
 const Designers: ITeamMember[] = [
-  {
-    name: 'Alina Trussova',
-    title: 'Art director, UX & UI designer',
-    description: 'Sparks the minds of designers while balancing creativity with rationality.',
-    descriptionExtended: 'When everything is elegant and perfect on earth… the moon will be conquered.',
-    imageUrl: 'Art Director, UX & UI Designer',
-    PrimaryImage: <AlinaPrimary />,
-    SecondaryImage: <AlinaSecondary />,
-    skillSet: ['Branding', 'Graphic design', 'UI design', 'User research', 'Usability testing'],
-    noHover: true,
-  },
   {
     name: 'Egle Kiik',
     title: 'UX & UI designer',
@@ -95,47 +94,27 @@ const Designers: ITeamMember[] = [
     skillSet: ['Printed media', 'Microcopy', 'UX analysis', 'UX/UI design', 'UX research', 'Usability testing'],
   },
   {
-    name: 'Kerli Aava',
-    title: 'Junior UX & UI designer',
-    description: 'A connoisseur of life, who seeks out new experiences and places on a frequent basis.',
-    descriptionExtended: "Possessing a wide range of skills, there's not much that escapes her eye.",
-    imageUrl: 'https://www.linkedin.com/in/kerli-aava/',
-    PrimaryImage: <InternPrimary />,
-    skillSet: ['In progress...'],
-    noHover: true,
+    name: 'Laura Streimann',
+    title: 'UI & UX designer',
+    description: 'A citizen of the world who has sojourned in many places in search of good design and new knowledge.',
+    descriptionExtended: " She's met many opponents, but none can match her excellent sense of humour.",
+    imageUrl: 'https://www.linkedin.com/in/laura-streimann-405414b1',
+    PrimaryImage: <LaurasPrimary />,
+    SecondaryImage: <LaurasSecondary />,
+    skillSet: ['Prototyping', 'UI design', 'UI analysis', 'UX analysis', 'User research', 'Usability testing'],
   },
 ];
 
 const Developers: ITeamMember[] = [
   {
     name: 'Harles-Herman Pilter',
-    title: 'Lead front-end developer',
+    title: 'Front-end lead & developer',
     description: 'Skilled in creating micro-interactions, also, has a strong sense for business.',
     descriptionExtended: 'He built a code delivery system that consists entirely of drones. Mr. Bezos is so jealous.',
     imageUrl: 'https://www.linkedin.com/in/harles-herman-pilter-6a3636114/',
     PrimaryImage: <HarlesPrimary />,
     SecondaryImage: <HarlesSecondary />,
     skillSet: ['Vue', 'Aurelia', 'React', 'Angular', 'TypeScript', 'App development', 'BEM'],
-  },
-  {
-    name: 'Anton Aavik',
-    title: 'Senior front-end developer',
-    description: 'Open-source enthusiast, who strives for perfection.',
-    descriptionExtended: `Abracadabra, hocus-pocus, add a bit of secret ingredients and magic happens.`,
-    imageUrl: 'https://www.linkedin.com/in/anton-aavik-0ba1a9176/',
-    PrimaryImage: <AntonPrimary />,
-    SecondaryImage: <AntonSecondary />,
-    skillSet: ['Vue', 'React', 'Angular', 'TypeScript', 'App development', 'BEM'],
-  },
-  {
-    name: 'Tõnis Terasmaa',
-    title: 'Front-end developer',
-    description: 'Doing creative wizardry with software and hardware.',
-    descriptionExtended: 'Cooking with one hand and coding with the other.... coding is a piece of cake.',
-    imageUrl: 'https://www.linkedin.com/in/t%C3%B5nis-terasmaa-79b6bbb7/',
-    PrimaryImage: <TerasmaaPrimary />,
-    SecondaryImage: <TerasmaaSecondary />,
-    skillSet: ['Vue', 'React', 'Angular', 'TypeScript', 'App development', 'BEM'],
   },
   {
     name: 'Ivar Kallejärv',
@@ -151,11 +130,11 @@ const Developers: ITeamMember[] = [
     name: 'Kaspar Suvi',
     title: 'Front-end developer',
     description: 'Wants to provide only reasonable and valuable code.',
-    descriptionExtended: 'His daily routine consists of sports activities like badminton and git push-ups.',
+    descriptionExtended: 'His daily routine consists of sports activities like bouldering and git push-ups.',
     imageUrl: 'https://www.linkedin.com/in/kaspar-suvi-141080120/',
     PrimaryImage: <SuviPrimary />,
     SecondaryImage: <SuviSecondary />,
-    skillSet: ['React', 'Angular', 'TypeScript', 'BEM'],
+    skillSet: ['React', 'Angular', 'TypeScript', 'BEM', 'Next'],
   },
   {
     name: 'Kaspar Naaber',
@@ -165,7 +144,40 @@ const Developers: ITeamMember[] = [
     imageUrl: 'https://www.linkedin.com/in/kaspar-naaber-6a240264/',
     PrimaryImage: <NaaberPrimary />,
     SecondaryImage: <NaaberSecondary />,
-    skillSet: ['React', 'TypeScript', 'Flow', 'GraphQL', 'BEM'],
+    skillSet: ['React', 'TypeScript', 'Flow', 'GraphQL', 'BEM', 'Next'],
+  },
+  {
+    name: 'Imre Laur',
+    title: 'Full stack developer',
+    description:
+      'Looking at the world through heart-shaped lens, thinking both how the client and the project feel, keeping a close eye on both.',
+    descriptionExtended: '',
+    imageUrl: 'https://www.linkedin.com/in/imre08',
+    PrimaryImage: <ImrePrimary />,
+    SecondaryImage: <ImreSecondary />,
+    skillSet: ['React', 'TypeScript', 'BEM'],
+  },
+  {
+    name: 'Timmo Mustonen',
+    title: 'Junior Front-end developer',
+    description: 'Taking a deep dive in the front-end world,',
+    descriptionExtended: 'Timmo has a wide array of skills in his grasp, with the knowledge to get more as needed.',
+    imageUrl: 'https://www.linkedin.com/in/timmo-mustonen-4b4494200',
+    PrimaryImage: <TimmoPrimary />,
+    SecondaryImage: <></>,
+    skillSet: ['React', 'TypeScript', 'BEM'],
+  },
+
+  {
+    name: 'Anna-Liisa Saks',
+    title: 'Junior Front-end developer',
+    description: 'An active sprinter, both in private and in business.',
+    descriptionExtended:
+      'Encouraging people to keep the goal in sight and keep pace as she does what she does best, develop.',
+    imageUrl: 'https://www.linkedin.com/in/anna-liisa-saks/',
+    PrimaryImage: <NaaberPrimary />,
+    SecondaryImage: <NaaberSecondary />,
+    skillSet: ['React', 'TypeScript', 'BEM'],
   },
 ];
 

@@ -235,6 +235,7 @@ $screen-xl-min: 1200px;
   background: linear-gradient(180deg, #043f5a -4.28%, #032230 125.15%);
   color: #fff;
   display: flex;
+  flex-direction: row-reverse;
   padding: 4rem 1rem;
 
   @include md {
@@ -244,18 +245,22 @@ $screen-xl-min: 1200px;
     margin: 0 2.5rem;
     max-width: 52rem;
     padding: 0 1rem;
-    text-align: right;
+    text-align: left;
   }
 
   &:nth-of-type(2n) {
     @include md {
-      flex-direction: row-reverse;
-      text-align: left;
+      flex-direction: row;
+      text-align: right;
     }
   }
 
   &__title {
     font-size: 2rem;
+    margin: 0;
+  }
+
+  &__time {
     margin: 0;
   }
 
@@ -302,8 +307,8 @@ $screen-xl-min: 1200px;
 
   &__logo {
     display: none;
-    margin-left: 3rem;
-    max-width: 300px;
+    margin-right: 3rem;
+    max-width: 200px;
     width: 70%;
 
     @include md {
