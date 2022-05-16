@@ -17,9 +17,10 @@ const footerExternalLinks = [
 
 interface FooterProps {
   showInternalLinks?: boolean;
+  showExternalLinksName?: boolean;
 }
 
-export const Footer: React.FC<FooterProps> = ({ showInternalLinks = true }) => (
+export const Footer: React.FC<FooterProps> = ({ showInternalLinks = true, showExternalLinksName = true }) => (
   <footer className="footer">
     <ul className="footer__links mt-0 list-unstyled">
       {showInternalLinks &&
@@ -34,7 +35,7 @@ export const Footer: React.FC<FooterProps> = ({ showInternalLinks = true }) => (
         <li className="footer__links-item" key={index}>
           <a className="footer__link" aria-label={name} href={link} target="_blank" rel="noreferrer noopener">
             {Icon}
-            <span>{name}</span>
+            <span>{showExternalLinksName && name}</span>
           </a>
         </li>
       ))}
