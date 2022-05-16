@@ -3,9 +3,8 @@ import React from 'react';
 import BackgroundBottom from '../_images/Background-Bottom.svg';
 import BackgroundTop from '../_images/Background-Top.svg';
 import DietlessSVG from '../_images/Dietless.svg';
-import EShowcaseSVG from '../_images/E-Showcase-Briefing.svg';
+import EPS from '../_images/EPS.svg';
 import ERBISVG from '../_images/ERBI.svg';
-import Fitek from '../_images/Fitek.svg';
 import Separator from '../_images/Separator.svg';
 import Taltech from '../_images/Taltech.svg';
 import { Stars } from '../stars/Stars';
@@ -13,6 +12,7 @@ import { Stars } from '../stars/Stars';
 interface IProject {
   name: string;
   description: string;
+  time: string;
   image: React.ReactElement;
   award?: { text: string; link: string };
   project?: string;
@@ -23,6 +23,7 @@ export const ProjectList: IProject[] = [
   {
     name: 'Dietless',
     description: 'A tailor-made meal plan app as a guide towards good health and right fat percentage for Estonians',
+    time: '11.2016 - 09.2021',
     image: <DietlessSVG />,
     award: { text: 'Kuldmuna 2018', link: 'https://defol.io/kuldmuna/2018-erik-orgus-tailor-made-meal-plan-app' },
     project: 'https://www.erikorgu.ee',
@@ -32,33 +33,28 @@ export const ProjectList: IProject[] = [
     name: 'Estonian Responsible Business Index',
     description:
       'Responsible and caring companies creating a wholesome and healthy living environment. Nationally acclaimed assessment platform made with Estonian  enterprises.',
+    time: '06.2016 - 12.2018',
     image: <ERBISVG />,
-    // project: https://questionnaire.csr.ee/#/login?afterLoginHash=%23%2FbasicQuestionnaire
+    project: 'https://questionnaire.csr.ee/#/login?afterLoginHash=%23%2FbasicQuestionnaire',
     tags: ['Design', 'Prototype', 'User research', 'User testing', 'Development', 'Aurelia'],
   },
   {
-    name: 'E-Showcase Briefing',
+    name: 'Eesti Perearstide Selts',
     description:
-      'Inspiring global policy makers, political leaders, corporate executives, investors and international media with the success story of e-Estonia and build links to leading IT service providers',
-    image: <EShowcaseSVG />,
-    // project: https://digitalexpo.e-estonia.com/
-    tags: ['Prototyping', 'UI analysis', 'Business analysis', 'User research'],
+      'This project was started with the aim to improve the efficiency and quality of healthcare services. Starting from the ground up - talking with nurses and doctors - has been a learning opportunity for many in a field that has been too static for the longest time.',
+    time: '04.2020 - ...',
+    image: <EPS />,
+    project: 'https://www.perearstiselts.ee/tarkvara',
+    tags: ['Prototyping', 'UI analysis', 'Service design', 'User research'],
   },
   {
     name: 'Taltech',
     description:
       'Inspiring global policy makers, political leaders, corporate executives, investors and international media with the success story of e-Estonia and build links to leading IT service providers',
+    time: '08.2018 - ...',
     image: <Taltech />,
-    // project: https://www.taltech.ee/en
+    // project: 'https://www.taltech.ee/en',
     tags: ['Development', 'React'],
-  },
-  {
-    name: 'Fitek',
-    description:
-      'Inspiring global policy makers, political leaders, corporate executives, investors and international media with the success story of e-Estonia and build links to leading IT service providers',
-    image: <Fitek />,
-    // project: https://www.unifiedpost.com/
-    tags: ['Development', 'AngularJS', 'React'],
   },
 ];
 
@@ -72,10 +68,11 @@ export const Portfolio: React.FC = () => (
       <p className="portfolio-header__subtitle">Some of our clients we have worked with along the way</p>
     </div>
     <ul className="portfolio-project-wrapper">
-      {ProjectList.map(({ name, description, tags, project, award, image }, index) => (
+      {ProjectList.map(({ name, description, time, tags, project, award, image }, index) => (
         <li key={`project-${name}-${index}`} className="portfolio-project" data-aos="fade-up">
           <div className="portfolio-project__text">
             <h2 className="portfolio-project__title">{name}</h2>
+            <p className="portfolio-project__time">{time}</p>
             <div className="portfolio-project__squiggle">
               <Separator />
             </div>

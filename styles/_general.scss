@@ -21,6 +21,10 @@ body {
   margin: 0;
 }
 
+.theme-dark {
+  background-color: variables.$color-dark-2;
+}
+
 .muted,
 .muted a {
   color: variables.$color--muted;
