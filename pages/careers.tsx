@@ -128,8 +128,8 @@ const NewIndex: React.FC = () => {
       </Head>
       <Navigation />
       <MovingStars />
-      <main>
-        <section className="transform-header__jumbotron" id="transform-header__jumbotron">
+      <main className="theme-dark">
+        <section id="transform-header__jumbotron">
           <div className="jumbotron" id="jumbotron">
             <div className="jumbotron__content">
               <h1 className="mt-0" data-aos="zoom-in">
@@ -138,8 +138,6 @@ const NewIndex: React.FC = () => {
             </div>
           </div>
         </section>
-
-        {/*<Portfolio />*/}
       </main>
       <Footer showInternalLinks={false} showExternalLinksName={false} />
     </>
