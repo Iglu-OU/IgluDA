@@ -6,7 +6,6 @@
 
 html,
 body {
-  background: variables.$color-primary;
   overflow-x: hidden;
 }
 
@@ -23,6 +22,7 @@ body {
 
 .theme-dark {
   background-color: variables.$color-dark-2;
+  color: variables.$color-typography-white;
 }
 
 .muted,

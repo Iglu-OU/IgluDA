@@ -3,15 +3,15 @@ import React from 'react';
 
 import { Card } from '../components/Card/Card';
 import { Footer } from '../components/footer/Footer';
-import { Journey } from '../components/journey/Journey';
 import { Navigation } from '../components/navigation/Navigation';
+import Offers from '../components/offers/Offers';
 import { MovingStars } from '../components/stars/MovingStars';
-import { Team } from '../components/team/Team';
-import { WorkFlow } from '../components/workflow/WorkFlow';
+
+export function getStaticProps() {
+  return { props: { theme: 'dark' } };
+}
 
 const NewIndex: React.FC = () => {
-  const [headingShouldBreak, setHeadingShouldBreak] = React.useState(false);
-
   const headerLinks = [
     { link: 'https://da.iglu.ee/#process', name: 'Process' },
     { link: 'https://da.iglu.ee/#journey', name: 'Journey' },
@@ -59,10 +59,6 @@ const NewIndex: React.FC = () => {
     return () => {
       clearInterval(scrollCheck);
     };
-  });
-
-  React.useEffect(() => {
-    setHeadingShouldBreak(document.body.getBoundingClientRect().width > 460);
   });
 
   React.useEffect(() => {
@@ -145,7 +141,7 @@ const NewIndex: React.FC = () => {
       </Head>
       <Navigation headerLinks={headerLinks} />
       <MovingStars />
-      <main className="theme-dark">
+      <main>
         <section id="transform-header__jumbotron">
           <div className="jumbotron" id="jumbotron">
             <div className="jumbotron__content">
@@ -159,6 +155,7 @@ const NewIndex: React.FC = () => {
             </div>
           </div>
         </section>
+        <Offers />
       </main>
       <Footer showInternalLinks={false} showExternalLinksName={false} />
     </>
