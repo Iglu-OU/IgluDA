@@ -132,7 +132,6 @@ const NewIndex: React.FC = () => {
         </noscript>
       </Head>
       <Navigation headerLinks={headerLinks} />
-      <MovingStars />
       <main>
         <section id="transform-header__jumbotron">
           <div className="jumbotron" id="jumbotron">
