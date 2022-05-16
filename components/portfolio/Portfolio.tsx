@@ -28,7 +28,7 @@ export const ProjectList: IProject[] = [
       "It's all about making the life of students, professors and all other university personnel more convenient and efficient.",
     time: '08.2018 - ...',
     image: <Taltech />,
-    // No public page to display
+    //TODO No public page to display, maybe later...?
     // project: 'https://www.taltech.ee/en',
     tags: ['UX research', 'Usability testing', 'Prototype', 'Business analysis', 'Development', 'React'],
   },
@@ -42,6 +42,7 @@ export const ProjectList: IProject[] = [
     tags: ['UX analysis', 'Business analysis', 'Prototyping', 'Development', 'React', 'Wordpress'],
   },
   /*
+  TODO Approval pending, upon receiving approval remove placeholder and replace with one of these
   {
     name: 'ERM',
     description:
@@ -50,7 +51,6 @@ export const ProjectList: IProject[] = [
     image: <ERM />,
     tags: ['Development', 'React', 'Wordpress'],
   },
-  */
   {
     name: 'Dietless',
     description: 'A tailor-made meal plan app as a guide towards good health and right fat percentage for Estonians',
@@ -60,6 +60,7 @@ export const ProjectList: IProject[] = [
     project: 'https://www.erikorgu.ee',
     tags: ['User testing', 'Development', 'Angular', 'Cordova'],
   },
+  */
   {
     name: 'Eesti Perearstide Selts',
     description:
@@ -77,6 +78,13 @@ export const ProjectList: IProject[] = [
     image: <ERBISVG />,
     project: 'https://questionnaire.csr.ee/#/login?afterLoginHash=%23%2FbasicQuestionnaire',
     tags: ['Design', 'Prototype', 'UX research', 'Usability testing', 'Development', 'Aurelia'],
+  },
+  {
+    name: 'And many more...',
+    description: '',
+    time: '',
+    image: <></>,
+    tags: [],
   },
 ];
 
