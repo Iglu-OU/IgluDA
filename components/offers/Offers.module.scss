@@ -1,3 +1,28 @@
 .offers {
   text-align: center;
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__item {
+    min-width: 272px;
+    padding: 10px;
+    text-align: left;
+  }
+
+  &__separator {
+    border-top: 1px solid #fff;
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+  }
 }
