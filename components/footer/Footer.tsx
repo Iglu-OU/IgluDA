@@ -15,16 +15,21 @@ const footerExternalLinks = [
   { link: 'https://www.linkedin.com/company/iglu-o%C3%BC/', name: 'LinkedIn', Icon: <Linkedin /> },
 ];
 
-export const Footer: React.FC = () => (
+interface FooterProps {
+  showInternalLinks?: boolean;
+}
+
+export const Footer: React.FC<FooterProps> = ({ showInternalLinks = true }) => (
   <footer className="footer">
     <ul className="footer__links mt-0 list-unstyled">
-      {footerInternalLinks.map(({ link, name }, index) => (
-        <li className="footer__links-item" key={`internal-link-${index}`}>
-          <a className="footer__link" href={link} target="_blank" rel="noreferrer noopener">
-            {name}
-          </a>
-        </li>
-      ))}
+      {showInternalLinks &&
+        footerInternalLinks.map(({ link, name }, index) => (
+          <li className="footer__links-item" key={`internal-link-${index}`}>
+            <a className="footer__link" href={link} target="_blank" rel="noreferrer noopener">
+              {name}
+            </a>
+          </li>
+        ))}
       {footerExternalLinks.map(({ link, name, Icon }, index) => (
         <li className="footer__links-item" key={index}>
           <a className="footer__link" aria-label={name} href={link} target="_blank" rel="noreferrer noopener">

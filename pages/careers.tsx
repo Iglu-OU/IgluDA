@@ -141,7 +141,7 @@ const NewIndex: React.FC = () => {
 
         {/*<Portfolio />*/}
       </main>
-      <Footer />
+      <Footer showInternalLinks={false} />
     </>
   );
 };
