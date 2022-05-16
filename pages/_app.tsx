@@ -10,7 +10,11 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
     Aos.init({ once: true });
   });
 
-  return <Component {...pageProps} />;
+  return (
+    <React.StrictMode>
+      <Component {...pageProps} />
+    </React.StrictMode>
+  );
 };
 
 export default App;
