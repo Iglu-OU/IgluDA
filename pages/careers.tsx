@@ -1,22 +1,21 @@
 import Head from 'next/head';
-import Script from 'next/script';
 import React from 'react';
 
+import Separator from '../components/_images/Separator.svg';
+import { CardList } from '../components/CardList/CardList';
 import { Footer } from '../components/footer/Footer';
-import { Journey } from '../components/journey/Journey';
 import { Navigation } from '../components/navigation/Navigation';
-import { Portfolio } from '../components/portfolio/Portfolio';
-import { MovingStars } from '../components/stars/MovingStars';
-import { Team } from '../components/team/Team';
-import { WorkFlow } from '../components/workflow/WorkFlow';
+import Offers from '../components/offers/Offers';
+
+export function getStaticProps() {
+  return { props: { theme: 'dark' } };
+}
 
 const NewIndex: React.FC = () => {
-  const [headingShouldBreak, setHeadingShouldBreak] = React.useState(false);
-
   const headerLinks = [
-    { link: '#process', name: 'Process' },
-    { link: '#journey', name: 'Journey' },
-    { link: '#team', name: 'Team' },
+    { link: 'https://da.iglu.ee/#process', name: 'Process' },
+    { link: 'https://da.iglu.ee/#journey', name: 'Journey' },
+    { link: 'https://da.iglu.ee/#team', name: 'Team' },
     { link: '/careers', name: 'Careers' },
   ];
 
@@ -63,10 +62,6 @@ const NewIndex: React.FC = () => {
   });
 
   React.useEffect(() => {
-    setHeadingShouldBreak(document.body.getBoundingClientRect().width > 460);
-  });
-
-  React.useEffect(() => {
     animateInvisible();
   }, []);
 
@@ -101,21 +96,13 @@ const NewIndex: React.FC = () => {
   return (
     <>
       <Head>
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=UA-133742543-1" />
-        <Script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-133742543-1');`,
-          }}
-        />
-        <Script
-          dangerouslySetInnerHTML={{
-            __html: `(function(h, o, t, j, a, r) { h.hj = h.hj || function() { (h.hj.q = h.hj.q || []).push(arguments); }; h._hjSettings = { hjid: 1173879, hjsv: 6 }; a = o.getElementsByTagName('head')[0]; r = o.createElement('script'); r.async = 1; r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv; a.appendChild(r); })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');`,
-          }}
-        />
-        <meta
-          name="description"
-          content="Iglu Digital Agency is the part of Iglu that handles design, UX and front-end development."
-        />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133742543-1" />
+        {/* prettier-ignore */}
+        <script dangerouslySetInnerHTML={{ __html: `window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-133742543-1');` }} />
+        {/* prettier-ignore */}
+        <script dangerouslySetInnerHTML={{ __html: `(function(h, o, t, j, a, r) { h.hj = h.hj || function() { (h.hj.q = h.hj.q || []).push(arguments); }; h._hjSettings = { hjid: 1173879, hjsv: 6 }; a = o.getElementsByTagName('head')[0]; r = o.createElement('script'); r.async = 1; r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv; a.appendChild(r); })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');`, }} />
+        {/* prettier-ignore */}
+        <meta name="description" content="Iglu Digital Agency is the part of Iglu that handles design, UX and front-end development." />
         <meta name="theme-color" content="#1396d4" />
         <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0" />
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
@@ -123,10 +110,8 @@ const NewIndex: React.FC = () => {
         <meta property="og:url" content="https://da.iglu.ee" />
         <meta property="og:site_name" content="Iglu DA" />
         <meta property="og:title" content="Iglu Digital Agency" />
-        <meta
-          property="og:description"
-          content="Iglu Digital Agency is the part of Iglu that handles design, UX and front-end development."
-        />
+        {/* prettier-ignore */}
+        <meta property="og:description" content="Iglu Digital Agency is the part of Iglu that handles design, UX and front-end development." />
         <meta property="og:image" content="https://da.iglu.ee/iglu.png" />
         <title>Iglu Digital Agency</title>
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
@@ -134,27 +119,40 @@ const NewIndex: React.FC = () => {
         <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png" />
         <link rel="manifest" href="manifest.json" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* prettier-ignore */}
+        <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,700&display=swap" />
+        {/* eslint-disable-next-line */}
+        {/* @ts-ignore */} {/* eslint-disable-next-line */} {/* prettier-ignore */}
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,700&display=swap" media="print" onLoad="this.media='all'" />
+        <noscript>
+          {/* prettier-ignore */}
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,700&display=swap" />
+        </noscript>
       </Head>
       <Navigation headerLinks={headerLinks} />
-      <MovingStars />
       <main>
-        <section className="transform-header__jumbotron" id="transform-header__jumbotron">
-          <div className="jumbotron" id="jumbotron">
-            <div className="jumbotron__content">
-              <h1 className="mt-0" data-aos="zoom-in">
-                Driven to make complex systems
-                {headingShouldBreak ? <br /> : ' '}
-                feel <strong>elegant</strong> and <strong className="invisible">invisible</strong>
-              </h1>
-            </div>
-          </div>
+        <section className="banner">
+          <h1 className="mt-0" data-aos="zoom-in">
+            <strong>Tule ehita meiega koos</strong>
+          </h1>
+          <Separator />
+          <p>
+            Iglul on oma lugu. Lugu, mida kirjutavad meie inimesed. Kontoris ja spordiväljakul, metsas ja saunas, koos
+            tahvli ees joonistades ja kooki küpsetades. Ühiselt.
+          </p>
+
+          <p>
+            Meie klientideks on telekomid, pangad, idufirmad. Me valime need kliendid, kellel on tahe teha head asja.
+            Need kliendid, kelle lahendustest saame kaasa rääkida, kasutada kaasaegset tehnoloogiat ja kirjutada puhast
+            koodi. Ainult nii saame jätkada lugu tarkvrarast, mis päriselt töötab.{' '}
+          </p>
         </section>
-        <WorkFlow />
-        <Journey />
-        <Team />
-        <Portfolio />
+
+        <CardList />
+        <Offers />
       </main>
-      <Footer />
+      <Footer showInternalLinks={false} showExternalLinksName={false} />
     </>
   );
 };
