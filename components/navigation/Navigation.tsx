@@ -6,6 +6,7 @@ const HeaderLinks = [
   { link: '#process', name: 'Process' },
   { link: '#journey', name: 'Journey' },
   { link: '#team', name: 'Team' },
+  { link: '#portfolio', name: 'Portfolio' },
 ];
 
 export const Navigation: React.FC = () => {

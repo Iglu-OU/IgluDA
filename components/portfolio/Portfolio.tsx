@@ -81,7 +81,7 @@ export const ProjectList: IProject[] = [
 ];
 
 export const Portfolio: React.FC = () => (
-  <section className="portfolio">
+  <section id="portfolio" className="portfolio">
     <BackgroundBottom />
     <BackgroundTop />
     <Stars id="portfolio-stars" maxStars={25} />
