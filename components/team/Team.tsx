@@ -9,7 +9,6 @@ import ImrePrimary from '../_images/team/primary/imre.svg';
 import IvarPrimary from '../_images/team/primary/ivar.svg';
 import NaaberPrimary from '../_images/team/primary/kasparn.svg';
 import SuviPrimary from '../_images/team/primary/kaspars.svg';
-import KristoPrimary from '../_images/team/primary/kristo.svg';
 import LauraPrimary from '../_images/team/primary/laura.svg';
 import LaurasPrimary from '../_images/team/primary/lauras.svg';
 import RaunoPrimary from '../_images/team/primary/rauno.svg';
@@ -21,7 +20,6 @@ import ImreSecondary from '../_images/team/secondary/imre.svg';
 import IvarSecondary from '../_images/team/secondary/ivar.svg';
 import NaaberSecondary from '../_images/team/secondary/kasparn.svg';
 import SuviSecondary from '../_images/team/secondary/kaspars.svg';
-import KristoSecondary from '../_images/team/secondary/kristo.svg';
 import LauraSecondary from '../_images/team/secondary/laura.svg';
 import LaurasSecondary from '../_images/team/secondary/lauras.svg';
 import RaunoSecondary from '../_images/team/secondary/rauno.svg';
@@ -49,16 +47,6 @@ const Analysts: ITeamMember[] = [
     PrimaryImage: <LauraPrimary />,
     SecondaryImage: <LauraSecondary />,
     skillSet: ['UI analysis', 'Business analysis', 'User research', 'Usability testing'],
-  },
-  {
-    name: 'Kristo Danilson',
-    title: 'UX & UI analyst',
-    description: 'Passionate about users and the business side of IT.',
-    descriptionExtended: 'There is a rumour that he discovered the true meaning of disco. But then they changed it.',
-    imageUrl: 'https://www.linkedin.com/in/kristo-danilson-a9a08b159/',
-    PrimaryImage: <KristoPrimary />,
-    SecondaryImage: <KristoSecondary />,
-    skillSet: ['Business analysis', 'User research', 'Usability testing'],
   },
   {
     name: 'Rauno Mäekivi',
