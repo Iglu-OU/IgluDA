@@ -14,6 +14,7 @@ export default function Document() {
         {/* eslint-disable-next-line */}
         {/* @ts-ignore */} {/* eslint-disable-next-line */} {/* prettier-ignore */}
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,700&display=swap" media="print" onLoad="this.media='all'" />
+        <meta name="robots" content="noindex">
         <noscript>
           <link
             rel="stylesheet"
