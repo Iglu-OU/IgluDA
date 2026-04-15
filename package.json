@@ -47,7 +47,7 @@
         "sass": "^1.51.0",
         "stylelint": "^14.8.2",
         "stylelint-config-sass-guidelines": "^9.0.1",
-        "typescript": "^4.6.4",
+        "typescript": "^6.0.2",
         "webpack": "^5.72.1"
     },
     "lint-staged": {
